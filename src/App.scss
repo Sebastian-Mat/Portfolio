@@ -1,0 +1,58 @@
+/* ========== Fonts ========== */
+@font-face {
+  font-family: "Doulos";
+  src: url("./dist/font/Doulos\ Sil.ttf");
+}
+
+/* ========== Others ========== */
+body {
+  background-color: black;
+  color: white;
+  cursor: initial;
+}
+
+/* ========== Nav ========== */
+.nav {
+  width: 100%;
+  height: 70px;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-family: Doulos;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+
+  a {
+    margin: 0px 25px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    letter-spacing: 1px;
+    display: inline-block;
+    transition: all 0.25s cubic-bezier(1, 0, 0.58, 0.97);
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      top: calc(50%);
+      right: 0;
+      background-color: white;
+      transition: inherit;
+    }
+
+    &:hover:before{
+        left: 0;
+        width: 100%;
+    }
+    &.active:before{
+        left: 0;
+        width: 100%;
+    }
+  }
+}
