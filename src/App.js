@@ -9,7 +9,7 @@ import {
   Switch,
   NavLink,
 } from "react-router-dom";
-import { TweenMax, Expo } from "gsap";
+import { TweenMax, Power3 } from "gsap";
 
 import Work from "./components/Work";
 import About from "./components/About";
@@ -22,9 +22,9 @@ function App() {
   useEffect(() => {
       TweenMax.from(nav.childNodes, {
       y: "-35px",
-      duration: 0.5,
-      delay: 1,
-      ease: Expo.easeInOut,
+      duration: 1,
+      delay: 0.5,
+      ease: Power3.easeOut,
       opacity: 0,
       stagger: {
         amount:0.1
