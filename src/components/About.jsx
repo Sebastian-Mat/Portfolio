@@ -6,11 +6,11 @@ const About = () => {
   useEffect(() => {
     TweenMax.from(about.childNodes, 1, {
       delay: 1,
-      y: "20px",
+      y: "100px",
       opacity: 0,
       ease: Power3.easeOut,
       stagger: {
-        amount: 0.1,
+        amount: 0.5,
       },
     });
 
@@ -41,16 +41,14 @@ const About = () => {
         Systems Engineering, born in <b>Barranquilla // Colombia.</b>
       </h2>
       <h3>
-        I know about Java, Python, HTML, CSS // SCSS, Javascript, React, PHP,
-        MySQL
+        With knowledge in Java, Python, HTML, CSS // SCSS, Javascript, React,
+        PHP and MySQL
       </h3>
       <h4>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis tenetur
-        quaerat voluptates officiis doloremque consectetur similique, quo unde
-        repellendus maiores laborum quae beatae qui necessitatibus iste quidem
-        animi pariatur. Itaque pariatur voluptate esse illum, quasi adipisci,
-        magni amet voluptatem sapiente distinctio soluta eum, placeat dolor
-        molestiae! Repellendus nisi dignissimos possimus!
+        I am a well-organized person, looking for new challenges and ways to
+        improve my skills, responsable, hard-worker with high attention to
+        detail, and always wanted to learn more about new technologies and
+        things with wich I can improve as a worker // person.
       </h4>
       <div className="img-1 img"></div>
       <div className="img-2 img"></div>
