@@ -66,7 +66,7 @@ function App() {
     TweenMax.from(nav.childNodes, {
       y: "-100px",
       duration: 1,
-      delay: 0.5,
+      delay: 0.2,
       ease: Power3.easeOut,
       opacity: 0,
       stagger: {
@@ -74,6 +74,7 @@ function App() {
       },
     });
   }, []);
+  
   return (
     <Router>
       <div
