@@ -14,40 +14,57 @@ import { TweenMax, Power3 } from "gsap";
 import Work from "./components/Work";
 import About from "./components/About";
 import Contact from "./components/Contact";
+import Project from "./components/Project";
 
 function App() {
   let nav = useRef(null);
 
   const info = [
     {
-      name: "PMB System",
-      link: "pmb-sys",
+      name: "PMB Sys",
+      link: "/pmb-sys",
       description:
         "Little project wich can store Pharmacys and Medicaments information by Local Storage, and can export PDF and JSON bills. Made it with HTML, JS, CSS, Materialize CSS and GSAP",
-      date: "2020",
-      git: "https://github.com/Sebastian-Mat/PM-System",
+      year: "2020",
+      git: "https://github.com/Sebastian-Mat/PMB-System",
+      next: "/pheripher",
+      prev: "/mm-bb"
     },
     {
       name: "Pheripher",
-      link: "pheripher",
+      link: "/pheripher",
       description:
         "Landing Page made with HTML, CSS and Semantic UI to the company Pheripher",
-      date: "2020",
-      git: "https://github.com/Sebastian-Mat/Pheripher-LD",
+      year: "2020",
+      git: "https://github.com/Sebastian-Mat/Pheripher-LP",
+      next: "/port-prot",
+      prev: "/pmb-sys"
     },
     {
       name: "Port Prot",
-      link: "port-prot",
+      link: "/port-prot",
       description:
         "A front-end portfolio prototype made with React, CSS and Bootstrap",
-      date: "2020",
+      year: "2020",
       git: "https://github.com/Sebastian-Mat/React-Portfolio",
+      next: "/mm-bb",
+      prev: "/pheripher"
+    },
+    {
+      name: "MMBB",
+      link: "/mm-bb",
+      description:
+        "Landing Page made with Materialize CSS, CSS, GSAP for a company concept called Lommejobber",
+      year: "2020",
+      git: "https://github.com/Sebastian-Mat/Lommejobber-LP",
+      next: "/pmb-sys",
+      prev: "/port-prot"
     },
   ];
 
   useEffect(() => {
     TweenMax.from(nav.childNodes, {
-      y: "-35px",
+      y: "-100px",
       duration: 1,
       delay: 0.5,
       ease: Power3.easeOut,
@@ -81,6 +98,11 @@ function App() {
         </Route>
         <Route path="/About" component={About} />
         <Route path="/Contact" component={Contact} />
+        {info.map((item) => (
+          <Route path={item.link} key={item.name}>
+            <Project info={item} />
+          </Route>
+        ))}
       </Switch>
     </Router>
   );

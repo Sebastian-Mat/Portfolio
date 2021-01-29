@@ -3,6 +3,11 @@ $Desktop: 768px;
 
 /* ========== Fonts ========== */
 @font-face {
+  font-family: "Gill Sans";
+  src: url("./dist/font/Gill\ Sans.otf");
+}
+
+@font-face {
   font-family: "Doulos";
   src: url("./dist/font/Doulos\ Sil.ttf");
 }
@@ -29,11 +34,11 @@ body {
   -o-user-select: none;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 2px;
 }
 
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
   background-color: #fff;
   border-radius: 10px;
 }
@@ -94,9 +99,9 @@ body {
   width: 100%;
   position: relative;
 
-  @media (max-width: 650px) and (max-height: 680px) {
+  @media (max-height: 523px) {
     height: auto;
-    padding: 20% 20%;
+    padding: 100px 20%;
   }
 
   h2 {
@@ -177,16 +182,31 @@ body {
   width: 100%;
   box-sizing: border-box;
   overflow: hidden;
+  position: relative;
 
-  @media (max-width: 650px) and (max-height: 680px) {
+  @media (max-height: 570px) {
     height: auto;
-    padding: 20% 20%;
+    padding: 100px 20%;
+  }
+
+  .info {
+    margin-top: 5%;
+
+    a {
+      color: white;
+    }
+
+    h2 {
+      margin: 0;
+      font-family: "Doulos";
+      text-decoration: underline;
+    }
   }
 
   h3 {
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
       sans-serif;
-    margin-top: 10%;
+    margin-top: 5%;
     span {
       text-decoration: underline;
       font-weight: bold;
@@ -218,6 +238,29 @@ body {
       height: 50px;
     }
 
+    .row {
+      display: flex;
+      flex-direction: row;
+      width: 60%;
+      justify-content: center;
+
+      input {
+        width: 50%;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+
+      @media (max-width: 700px) {
+        flex-direction: column;
+        
+        input {
+          width: 100%;
+          margin-left: 0px;
+          margin-right: 0;
+        }
+      }
+    }
+
     button {
       background-color: transparent;
       width: 150px;
@@ -232,23 +275,6 @@ body {
         background-color: #fff;
         color: black;
       }
-    }
-  }
-
-  h4 {
-    font-weight: lighter;
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-      sans-serif;
-  }
-
-  svg {
-    stroke: white;
-    stroke-width: 2px;
-    fill: transparent;
-    transition: 0.2s;
-
-    &:hover {
-      fill: white;
     }
   }
 }
@@ -298,8 +324,87 @@ body {
     -webkit-text-fill-color: transparent;
     transition: 0.5s ease-out;
 
-    &:hover{
+    &:hover {
       background-position: -100%;
+    }
+  }
+
+  @media (max-width: 973px) {
+    padding: 100px 20%;
+
+    a {
+      background-position: -100%;
+    }
+  }
+
+  @media (max-height : 600px) {
+    height: auto;
+  }
+}
+
+/* ========== Project ========== */
+.project {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 0% 20%;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  text-align: center;
+
+  @media (max-width: 650px), (max-height: 680px) {
+    height: auto;
+    padding: 20% 20%;
+  }
+
+  h1 {
+    font-family: Cosi;
+    font-size: 100px;
+    margin: 0;
+    margin-top: 10%;
+  }
+
+  h4 {
+    font-family: Monument;
+    font-size: 20px;
+    margin: 20px 0px;
+  }
+
+  h2 {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+    font-size: 20px;
+    font-weight: lighter;
+    text-decoration: underline;
+  }
+
+  .repo {
+    margin-top: 50px;
+  }
+
+  .pagination {
+    width: 100%;
+    display: flex;
+    margin-top: 50px;
+    .pag {
+      width: 50%;
+    }
+  }
+  a {
+    text-decoration: none;
+
+    svg {
+      stroke: rgb(51, 51, 51);
+      transition: 0.2s;
+
+      &:hover {
+        stroke: white;
+        transition: 0.2s;
+      }
     }
   }
 }
